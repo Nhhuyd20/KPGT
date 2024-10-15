@@ -23,7 +23,7 @@ class Trainer():
         md = md.to(self.device)
         g = g.to(self.device)
         labels = labels.to(self.device)
-        predictions = model.forward_tune(g, ecfp, md, perturb)
+        predictions = model.forward_tune(g, ecfp, md)
         return predictions, labels
 
     def train_epoch(self, model, train_loader, epoch_idx):
